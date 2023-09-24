@@ -1,0 +1,5 @@
+langchain==0.0.292
+line-bot-sdk==3.5.0
+
+./dependencies/botocore-1.31.21-py3-none-any.whl
+./dependencies/boto3-1.28.21-py3-none-any.whl
