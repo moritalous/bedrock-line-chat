@@ -1,5 +1,6 @@
 import os
 import json
+import boto3
 
 from langchain.chat_models import BedrockChat
 from langchain.memory.chat_message_histories import DynamoDBChatMessageHistory
@@ -27,11 +28,14 @@ DYNAMODB_TABLE_NAME = os.getenv('DYNAMODB_TABLE_NAME')
 line_configuration = Configuration(access_token=LINE_CHANNEL_ACCESS_TOKEN)
 line_handler = WebhookHandler(channel_secret=LINE_CHANNEL_SECRET)
 
+
+
 llm = BedrockChat(
     model_id=FOUNDATION_MODEL, 
     model_kwargs={
         "max_tokens_to_sample": 4096
-    }
+    },
+    client=boto3.client('bedrock-runtime')
 )
 
 @line_handler.add(MessageEvent, message=TextMessageContent)

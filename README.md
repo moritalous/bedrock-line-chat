@@ -55,16 +55,6 @@ BedrockとチャットができるLINEのボットを作成します。
         git clone https://github.com/moritalous/bedrock-line-chat.git
         ```
 
-    1. 依存ライブラリーの取得
-
-        download-dependencies.shを実行しBedrockに対応したBoto3を取得します。スクリプトの取得元は[こちら](https://raw.githubusercontent.com/aws-samples/amazon-bedrock-workshop/main/download-dependencies.sh)です。
-
-        ```
-        cd bedrock-line-chat
-        chmod +x download-dependencies.sh
-        ./download-dependencies.sh
-        ```
-
     1. ビルド
 
         ```
