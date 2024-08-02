@@ -3,4 +3,3 @@ langchain==0.2.11
 langchain-community==0.2.10
 langchain-aws==0.1.13
 line-bot-sdk==3.5.0
-numexpr==2.9.0

@@ -1,23 +1,19 @@
 import os
-import json
-import boto3
 
-from langchain_aws import ChatBedrock
+import boto3
+from langchain.chains import ConversationChain
 from langchain.memory import ConversationBufferWindowMemory
 from langchain.memory.chat_message_histories import DynamoDBChatMessageHistory
-from langchain.chains import ConversationChain
-
+from langchain_aws import ChatBedrock
 from linebot.v3 import WebhookHandler
-from linebot.v3.exceptions import InvalidSignatureError
 from linebot.v3.messaging import (
-    Configuration,
     ApiClient,
+    Configuration,
     MessagingApi,
     ReplyMessageRequest,
     TextMessage,
 )
 from linebot.v3.webhooks import MessageEvent, TextMessageContent
-
 
 LINE_CHANNEL_ACCESS_TOKEN = os.getenv("LINE_CHANNEL_ACCESS_TOKEN")
 LINE_CHANNEL_SECRET = os.getenv("LINE_CHANNEL_SECRET")
