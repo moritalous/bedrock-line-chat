@@ -1,3 +1,5 @@
-boto3==1.28.57
-langchain==0.0.303
+boto3==1.34.151
+langchain==0.2.11
+langchain-community==0.2.10
+langchain-aws==0.1.13
 line-bot-sdk==3.5.0
